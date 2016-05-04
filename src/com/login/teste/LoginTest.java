@@ -11,11 +11,14 @@ public class LoginTest extends Login {
 	
 	@Test
 	public void testLoginCorreto() {
-	    assertFalse("Retorna Falsse - Login invalido",login.validarLogin("1234"));
+		assertTrue("Retorna true - Login valido",login.validarLogin("123"));
+	}
+	
+	public void testLoginIncorreto(){
+		assertFalse("Retorna False - Login invalido",login.validarLogin("1234"));
 		assertFalse("Reterona False- Login em Branco",login.validarLogin(""));
 		assertFalse("Reterona False- Login Invalido",login.validarLogin(null));
-		assertTrue("Retorna True - Login correto",login.ValidarLoginIncorreto("YUYUYU"));
 		
 	}
-
+	
 }
