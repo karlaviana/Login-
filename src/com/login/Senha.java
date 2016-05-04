@@ -1,11 +1,13 @@
 package com.login;
 
 public class Senha {
-
 	public boolean validarSenha(String senha) {
-		return false;
+		if ((senha== null) || (senha.length()!=3)|| (senha.isEmpty())){
+			return false;
+		}
+			return true;
+		
+
 	}
-	public boolean ValidarsenhaIncorreto(String senha){
-		return true;
-	}
+
 }
